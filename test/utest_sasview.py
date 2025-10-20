@@ -6,6 +6,8 @@ import os
 import re
 import subprocess
 import sys
+import pytest
+
 
 LOGGER_CONFIG_FILE = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'logging.ini')
 logging.config.fileConfig(LOGGER_CONFIG_FILE)
@@ -33,7 +35,7 @@ def run_tests(dirs=None, run_all=False):
     passed = 0
     failed = 0
     n_tests = 0
-    n_errors = 0
+    n_errors = 0;
     n_failures = 0
 
     failure_text = []
